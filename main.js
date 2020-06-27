@@ -5,21 +5,32 @@
 //          PART ONE
 // ***************************
 // Write a JavaScript program to display the current day and time, start with:
-console.log(new Date)
+//console.log(new Date)
+
 
 const displayDate = () => {
-  const currentDate = new Date()
-
-  document.getElementById("display-element").innerHTML = currentDate;
+  let currentDate = Date();
+  console.log(currentDate)
+ document.getElementById("display-element").innerHTML = currentDate;
 }
  
 
 // Write a JavaScript program to convert a number to a string.
+const convertNumStr = () => {
+  let number = document.getElementById("connum").value;
+  number = "" + number;
+  document.getElementById("convert-number").innerHTML = number;
+  //typeData(number, "convert-number");
+}
 
 
-
-// Write a JavaScript program to convert a string to the number.
-
+//Write a JavaScript program to convert a string to the number.
+const convertStrNum = () => {
+  let str = document.getElementById("conStr").value;
+  str = parseInt(str);
+  document.getElementById("convert-string").innerHTML = str;
+ //typeData(str, "convert-string");
+}
 
 
 // Write a JavaScript program that takes in different datatypes and prints out whether they are a:
@@ -29,19 +40,73 @@ const displayDate = () => {
   // * Number
   // * NaN
   // * String
+// const typeData = (x, y) => {
+//   if(typeOf x == 'boolean'){
+//     document.getElementById(y).innerHTML = x + ' is a Boolean!'}
+//   else if(typeOf x == 'null')
+//   document.getElementById(y).innerHTML = x + ' is a Null!'
+//   else if(typeOf x == 'underfined')
+//   document.getElementById(y).innerHTML = x + ' is Undefined!'
+//   else if(typeOf x == 'number')
+//   document.getElementById(y).innerHTML = x + ' is a Number!'
+//   else if(typeOf x == 'NaN')
+//   document.getElementById(y).innerHTML = x + ' is NaN!'
+//   else
+//   document.getElementById(y).innerHTML = x + ' is a String'
+// }
   
 
   
 // Write a JavaScript program that adds 2 numbers together.
+const addNums = () => {
+  let num1 = document.getElementById("add1").value;
+  let num2 = document.getElementById("add2").value;
 
+  num1 = parseInt(num1);
+  num2 = parseInt(num2);
+
+  document.getElementById("addNum").innerHTML = num1 + num2
+}
 
 
 // Write a JavaScript program that runs only when 2 things are true.
+const twoTrue = () => {
+  let a = document.getElementById("t1").value;
+  let b = document.getElementById("t2").value;
 
+  a = a.trim();
+  b = b.trim();
+
+  a = a.toLowerCase();
+  b = b.toLowerCase();
+
+  if (a === 'true' && b === 'true') {
+    document.getElementById("twoT").innerHTML = "Both arguments true."
+  }
+  else {
+    document.getElementById("twoT").innerHTML = "One or both arguments are not true"
+  }
+}
 
 
 // Write a JavaScript program that runs when 1 of 2 things are true.
+const oneTrue = () => {
+  let a = document.getElementById("ot1").value;
+  let b = document.getElementById("ot2").value;
 
+  a = a.trim();
+  b = b.trim();
+
+  a = a.toLowerCase();
+  b = b.toLowerCase();
+
+  if (a === 'true' || b === 'true') {
+    document.getElementById("oneT").innerHTML = "One or both arguments true."
+  }
+  else {
+    document.getElementById("oneT").innerHTML = "No arguments are true"
+  }
+}
 
 
 // Write a JavaScript program that runs when both things are not true.  

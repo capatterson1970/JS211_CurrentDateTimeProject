@@ -3,13 +3,54 @@
   <head>
     <meta charset="utf-8">
     <title></title>
-    <script src="main.js"></script>
+    <script src="./main.js"></script>
   </head>
   <body>
     <h1>Hello World!</h1>
     <hr/>
-    <div id="display-element"></div>
+    
     <button onclick="displayDate()">Click Me</button>
+    <div id="display-element"></div>
     <hr/>
+    
+    <label for="connum">Enter a number: </label>
+    <input type="text" id="connum" name="connum" />
+    <button onclick="convertNumStr()">Click Me</button>
+    <div id="convert-number"></div>
+    <hr/>
+
+    <label for="conStr">Enter a number: </label>
+    <input type="text" id="conStr" name="conStr" />
+    <button onclick="convertStrNum()">Click Me</button>
+    <div id="convert-string"></div>
+    <hr/>
+
+    <label for="add1">Enter a number: </label>
+    <input type="text" id="add1" name="add1" />
+    <br />
+    <label for="add2">Enter a number: </label>
+    <input type="text" id="add2" name="add2" />
+    <button onclick="addNums()">Click Me</button>
+    <div id="addNum"></div>
+    <hr/>
+
+    <label for="t1">Enter True/False: </label>
+    <input type="text" id="t1" name="t1" />
+    <br />
+    <label for="t2">Enter True/False: </label>
+    <input type="text" id="t2" name="t2" />
+    <button onclick="twoTrue()">Click Me</button>
+    <div id="twoT"></div>
+    <hr/>
+
+    <label for="ot1">Enter True/False: </label>
+    <input type="text" id="ot1" name="ot1" />
+    <br />
+    <label for="ot2">Enter True/False: </label>
+    <input type="text" id="ot2" name="ot2" />
+    <button onclick="oneTrue()">Click Me</button>
+    <div id="oneT"></div>
+    <hr/>
+
   </body>
 </html>
